@@ -1,7 +1,7 @@
 FROM bigtop/slaves:trunk-centos-7
 
 RUN yum install -y epel-release
-RUN yum install -y R R-devel libcurl-devel openssl-devel
+RUN yum install -y R R-devel libcurl-devel openssl-devel pandoc
 
 RUN R -e "install.packages('devtools', repos = 'http://cran.us.r-project.org')"
 RUN R -e "install.packages('rmarkdown', repos = 'http://cran.us.r-project.org')"
